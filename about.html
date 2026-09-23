@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <title>civora</title>
+</head>
+<body class="bg-light">
+
+<!-- navbar (same as other pages, just active link changes to About) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="fa-solid fa-city me-2"></i>Civora
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="report.html">Report Issue</a></li>
+        <li class="nav-item"><a class="nav-link" href="alerts.html">Live Alerts</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+      </ul>
+      <a href="report.html" class="btn btn-success">
+        <i class="fa-solid fa-camera me-1"></i> Report an Issue
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- About content -->
+<div class="container mt-5 mb-5">
+  <h3 class="mb-3">About Civora</h3>
+  <p>
+    Civora is a concept civic platform built as a Bootstrap project.
+    The idea is simple: every citizen becomes a sensor for their own city —
+    reporting potholes, broken signals, traffic violations, and pollution
+    directly to the authorities who can fix them.
+  </p>
+  <p>
+    Reports move through a live status pipeline — from <strong>Reported</strong>,
+    to <strong>Authorities Notified</strong>, to <strong>Resolved</strong> —
+    and the reporter only earns a reward once the issue is actually verified fixed,
+    keeping the system honest.
+  </p>
+  <p>
+    Alongside reporting, Civora also shows live-updating city stats — traffic,
+    air quality, power grid load, and public transit performance — giving
+    residents a single place to see how their city is doing right now.
+  </p>
+</div>
+
+<!-- footer (same as other pages) -->
+<footer class="bg-dark text-light py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold"><i class="fa-solid fa-city me-2"></i>Civora</h5>
+        <p class="text-white-50">
+          A civic platform where every citizen becomes a sensor for their city —
+          report issues, track live city stats, and earn rewards for verified fixes.
+        </p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Dashboard</a></li>
+          <li><a href="report.html" class="text-light text-decoration-none">Report an Issue</a></li>
+          <li><a href="alerts.html" class="text-light text-decoration-none">Live Alerts</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">College Project</h6>
+        <p class="text-white mb-0">
+          Built as a Bootstrap  project — a concept demo, not a real live service.
+        </p>
+      </div>
+    </div>
+    <hr class="border-secondary">
+    <p class="text-center text-white-50 mb-0">© 2026 Civora. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
