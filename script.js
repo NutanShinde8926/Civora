@@ -31,37 +31,33 @@ setInterval(updateStats, 4000);
 
 
 const reportForm = document.getElementById("reportForm");
-const alertsList = document.querySelector("#alerts .list-group");
 
-reportForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+if (reportForm) {
+  reportForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  let category = document.querySelector('input[name="category"]:checked').nextElementSibling.textContent;
-  let location = document.getElementById("location").value || "Location not specified";
+    let category = document.querySelector('input[name="category"]:checked').nextElementSibling.textContent;
+    let location = document.getElementById("location").value || "Location not specified";
 
-  let newItem = document.createElement("li");
-  newItem.className = "list-group-item d-flex justify-content-between align-items-center";
-  newItem.innerHTML = `
-    ${category} — ${location}
-    <span class="badge bg-danger">Reported</span>
-  `;
+    // Get existing reports from localStorage, or start a new empty list
+    let reports = JSON.parse(localStorage.getItem("civoraReports")) || [];
 
-  alertsList.prepend(newItem);
+    // Add the new report, with the current time saved
+    reports.push({
+      category: category,
+      location: location,
+      time: Date.now()
+    });
 
-  let badge = newItem.querySelector(".badge");
+    // Save the updated list back into localStorage
+    localStorage.setItem("civoraReports", JSON.stringify(reports));
 
-  setTimeout(function () {
-    badge.className = "badge bg-warning text-dark";
-    badge.textContent = "Authorities Notified";
-  }, 3000);
+    alert("Report submitted! Check Live Alerts on the Dashboard to track its status.");
+    reportForm.reset();
+  });
+}
 
-  setTimeout(function () {
-    badge.className = "badge bg-success";
-    badge.textContent = "Resolved · Reward Issued";
-  }, 6000);
 
-  reportForm.reset();
-});
 
 
 const photoInput = document.getElementById("photo");
