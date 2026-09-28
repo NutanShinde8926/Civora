@@ -9,27 +9,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <title>civora</title>
 </head>
-<body>
-<!-- navabr -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<body class="bg-light">
+
+<!-- navbar (same as other pages, active link changes to Rewards) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">
       <i class="fa-solid fa-city me-2"></i>Civora
     </a>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="report.html">Report Issue</a></li>
-        <li class="nav-item"><a class="nav-link active" href="alerts.html">Live Alerts</a></li>
-        <li class="nav-item"><a class="nav-link" href="rewards.html">Rewards</a></li>
+        <li class="nav-item"><a class="nav-link" href="alerts.html">Live Alerts</a></li>
+        <li class="nav-item"><a class="nav-link active" href="rewards.html">Rewards</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       </ul>
-
       <a href="report.html" class="btn btn-success">
         <i class="fa-solid fa-camera me-1"></i> Report an Issue
       </a>
@@ -37,37 +35,63 @@
   </div>
 </nav>
 
+<!-- Rewards / Leaderboard content -->
+<div class="container mt-5 mb-5">
+  <h3 class="mb-3">Top Reporters</h3>
+  <p class="text-muted">Citizens who've reported the most verified, resolved issues.</p>
 
+  <table class="table table-striped table-hover align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Verified Reports</th>
+        <th>Points Earned</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🥇 1</td>
+        <td>Aarav Deshmukh</td>
+        <td>14</td>
+        <td><span class="badge bg-success">420 pts</span></td>
+      </tr>
+      <tr>
+        <td>🥈 2</td>
+        <td>Priya Kulkarni</td>
+        <td>11</td>
+        <td><span class="badge bg-success">330 pts</span></td>
+      </tr>
+      <tr>
+        <td>🥉 3</td>
+        <td>Rohan Sharma</td>
+        <td>9</td>
+        <td><span class="badge bg-success">270 pts</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Sneha Patil</td>
+        <td>6</td>
+        <td><span class="badge bg-secondary">180 pts</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Karan Joshi</td>
+        <td>4</td>
+        <td><span class="badge bg-secondary">120 pts</span></td>
+      </tr>
+    </tbody>
+  </table>
 
-<!-- List Groups, Badges, Colors   Basic List Groups -->
-<div class="container mt-5" id="alerts">
-  <h3 class="mb-3">Live Alerts</h3>
-  <ul class="list-group">
-
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      Pothole reported near FC Road junction
-      <span class="badge bg-success">Resolved · Reward Issued</span>
-    </li>
-
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      Broken traffic signal at Kothrud Depot
-      <span class="badge bg-warning text-dark">Authorities Notified</span>
-    </li>
-
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      Zebra crossing ignored, Shivaji Nagar
-      <span class="badge bg-danger">Reported</span>
-    </li>
-
-  </ul>
+  <div class="alert alert-warning mt-4">
+    🏅 Points are only awarded once a reported issue is verified fixed by authorities — reports still pending don't count yet.
+  </div>
 </div>
 
-<!-- footer -->
-<!-- uses Grid, Colors, and Typography, nothing new. -->
+<!-- footer (same as other pages) -->
 <footer class="bg-dark text-light py-5 mt-5">
   <div class="container">
     <div class="row">
-
       <div class="col-md-4 mb-3">
         <h5 class="fw-bold"><i class="fa-solid fa-city me-2"></i>Civora</h5>
         <p class="text-white-50">
@@ -75,33 +99,26 @@
           report issues, track live city stats, and earn rewards for verified fixes.
         </p>
       </div>
-
       <div class="col-md-4 mb-3">
         <h6 class="fw-bold">Quick Links</h6>
         <ul class="list-unstyled">
           <li><a href="index.html" class="text-light text-decoration-none">Dashboard</a></li>
           <li><a href="report.html" class="text-light text-decoration-none">Report an Issue</a></li>
-          <li><a href="rewards.html" class="text-light text-decoration-none">Rewards</a></li>
           <li><a href="alerts.html" class="text-light text-decoration-none">Live Alerts</a></li>
+          <li><a href="rewards.html" class="text-light text-decoration-none">Rewards</a></li>
         </ul>
       </div>
-
       <div class="col-md-4 mb-3">
         <h6 class="fw-bold">College Project</h6>
-        <p class="text-white-50 mb-0 ">
+        <p class="text-white-50 mb-0">
           Built as a Bootstrap project — a concept demo, not a real live service.
         </p>
       </div>
-
     </div>
-
     <hr class="border-secondary">
-
-    <p class="text-center text-muted mb-0">© 2026 Civora. All Rights Reserved.</p>
+    <p class="text-center text-white-50 mb-0">© 2026 Civora. All Rights Reserved.</p>
   </div>
 </footer>
-
-
 <script src="script.js"></script>
 </body>
 </html>
